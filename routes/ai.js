@@ -9,12 +9,12 @@ const Memory = require("../models/Memory"); // FIXED ✔
 const fetch = global.fetch || require("node-fetch");
 
 // Safe logging
-console.log(
-  "Gemini key loaded:",
-  process.env.GEMINI_API_KEY
-    ? process.env.GEMINI_API_KEY.slice(0, 12) + "..."
-    : "undefined"
-);
+// console.log(
+//   "Gemini key loaded:",
+//   process.env.GEMINI_API_KEY
+//     ? process.env.GEMINI_API_KEY.slice(0, 12) + "..."
+//     : "undefined"
+// );
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
@@ -225,3 +225,4 @@ ${modeInstruction}
 });
 
 module.exports = router;
+
